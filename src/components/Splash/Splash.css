@@ -1,16 +1,14 @@
 .weather-container {
 	height: 100vh;
-	/* display: var(--d-flex);
-	flex-direction: var(--f-d-c); */
 	display: flex;
 	flex-direction: column;
 }
 .weather-text {
-	/* display: var(--d-flex); */
 	display: flex;
 	justify-content: center;
 	height: 50%;
 	align-items: flex-end;
+	font-size: 24px;
 }
 .weather-footer {
 	display: flex;
@@ -18,4 +16,6 @@
 	height: 50%;
 	align-items: flex-end;
 	padding-bottom: 2rem;
+	font-size: 10px;
+	color: #616161;
 }
