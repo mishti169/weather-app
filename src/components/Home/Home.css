@@ -1,0 +1,17 @@
+.home--header {
+	padding: 3rem;
+	border: 1px solid green;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	/* justify-content: flex-end; */
+}
+
+.home--header_text {
+	/* border: 1px dotted blue; */
+}
+.home--header_icon {
+	/* border: 1px dotted red; */
+	display: flex;
+	justify-content: flex-end;
+	gap: 1rem;
+}
