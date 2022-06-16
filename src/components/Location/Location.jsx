@@ -1,7 +1,6 @@
-import React from 'react';
-import CityTemperature from '../CityTemperature/CityTemperature';
 import ChevronLeftLogo from '../../assets/icons/chevron-left.svg';
 import PlusLogo from '../../assets/icons/plus.svg';
+import CityTemperature from '../CityTemperature/CityTemperature';
 import './Location.css';
 
 const Location = () => {
