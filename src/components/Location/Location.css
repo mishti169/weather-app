@@ -17,27 +17,3 @@
 .location--header_plus-icon {
 	color: #616161;
 }
-.location--body {
-	display: flex;
-	justify-content: space-between;
-}
-.location--body--details {
-	display: flex;
-	flex-direction: column;
-	row-gap: 5px;
-	color: #616161;
-}
-.location--body--details_city {
-	font-size: 24px;
-	line-height: 28px;
-	color: black;
-}
-.location--body--details_temp {
-	font-size: 18px;
-	line-height: 21px;
-}
-
-.location--body--details_temp-text {
-	font-size: 12px;
-	line-height: 14px;
-}
