@@ -1,0 +1,18 @@
+.location {
+	display: flex;
+	flex-direction: column;
+	padding: 70px 30px;
+}
+.location--header {
+	display: flex;
+	justify-content: space-between;
+}
+.location--header_text-icon {
+	display: flex;
+	color: #616161;
+	align-items: center;
+	column-gap: 5px;
+}
+.location--header_plus-icon {
+	color: #616161;
+}
