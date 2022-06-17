@@ -1,0 +1,4 @@
+.temp-details {
+	display: flex;
+	flex-direction: column;
+}
