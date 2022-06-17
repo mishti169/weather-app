@@ -27,3 +27,41 @@
 	flex-direction: column;
 	row-gap: 10px;
 }
+.forecast--body--hourly_time {
+	font-size: 12px;
+	line-height: 14px;
+}
+
+.forecast--body--daily {
+	row-gap: 20px;
+	display: flex;
+	flex-direction: column;
+}
+.forecast--body--daily_title {
+	font-size: 18px;
+	line-height: 21px;
+	color: #616161;
+}
+.forecast--body--daily_time-icon-temp--container {
+	display: flex;
+	flex-direction: column;
+	row-gap: 10px;
+	column-gap: 30px;
+	align-items: center;
+}
+.forecast--body--daily_time-date {
+	font-size: 12px;
+	line-height: 14px;
+	color: #616161;
+}
+
+.forecast--body--daily_time-temp {
+	font-size: 10px;
+	line-height: 11px;
+	color: #616161;
+}
+.forecast--body--daily_time-icon {
+	display: flex;
+	gap: 1rem;
+	overflow-x: scroll;
+}
