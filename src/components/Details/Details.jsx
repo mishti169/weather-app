@@ -8,7 +8,10 @@ const Details = () => {
 		<div className='details'>
 			<Header />
 			<div className='details--body'>
-				<span className='details--body_text'>Details</span>
+				<div className='details--body_text'>
+					<span className='details--body_text-1'>Details</span>
+					<span className='details--body_text-2'>Forecast</span>
+				</div>
 				<div className='details--body_inner-body'>
 					<TempDetails />
 					<TempDetails />
