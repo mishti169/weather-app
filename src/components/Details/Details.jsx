@@ -1,11 +1,7 @@
 import React from 'react';
-
+import './Details.css';
 const Details = () => {
-	return (
-		<>
-			<div>this is Details</div>
-		</>
-	);
+	return <div className='border'> this is Details</div>;
 };
 
 export default Details;
