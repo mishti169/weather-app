@@ -3,21 +3,6 @@
 	flex-direction: column;
 	padding: 30px;
 }
-.home--header {
-	display: flex;
-	justify-content: space-between;
-}
-
-.home--header_text {
-	display: flex;
-	flex-direction: column;
-}
-.home--header_icon {
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	gap: 20px;
-}
 .home--body {
 	color: #616161;
 	display: flex;
@@ -25,15 +10,7 @@
 	align-items: center;
 	row-gap: 50px;
 }
-.home--header_city {
-	font-size: 18px;
-	line-height: 21px;
-}
-.home--header_location {
-	font-size: 10px;
-	line-height: 12px;
-	color: #616161;
-}
+
 .home--body_details {
 	display: flex;
 	flex-direction: column;

@@ -1,31 +1,16 @@
-import { useHistory } from 'react-router-dom';
 import ArrowDownLogo from '../../assets/icons/arrow-down.svg';
 import ArrowUpLogo from '../../assets/icons/arrow-up.svg';
 import CloudRainLogo from '../../assets/icons/cloud-rain.svg';
-import MapLogo from '../../assets/icons/map.svg';
-import SettingsLogo from '../../assets/icons/settings.svg';
+
 import SunRiseLogo from '../../assets/icons/sunrise.svg';
 import SunSetLogo from '../../assets/icons/sunset.svg';
+import Header from '../Header/Header';
 import './Home.css';
 
 const Home = () => {
-	const history = useHistory();
-	const handleClick = () => {
-		history.push('/location');
-	};
-
 	return (
 		<div className='home'>
-			<div className='home--header'>
-				<div className='home--header_text'>
-					<span className='home--header_city'>Mumbai</span>
-					<span className='home--header_location'>current Location </span>
-				</div>
-				<div className='home--header_icon'>
-					<img onClick={handleClick} width={21} height={21} src={MapLogo} />
-					<img width={21} height={21} src={SettingsLogo} />
-				</div>
-			</div>
+			<Header />
 			<span className='home--body_in-sync'>in sync</span>
 			<div className='home--body'>
 				<div className='home--body_details'>
