@@ -6,7 +6,9 @@ const Hourly = () => {
 	return (
 		<div className='forecast--body--hourly'>
 			<span className='forecast--body--hourly_title'>Hourly Forecast</span>
-			<HourlyData />
+			<div className='forecast--body--hourly_time-icon '>
+				<HourlyData />
+			</div>
 		</div>
 	);
 };
