@@ -22,6 +22,12 @@
 	line-height: 21px;
 	color: #616161;
 }
+.forecast--body--hourly_time-icon {
+	display: flex;
+	overflow: scroll;
+	gap: 30px;
+}
+
 .forecast--body--hourly_time-icon--container {
 	display: flex;
 	flex-direction: column;
