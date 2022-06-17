@@ -2,22 +2,22 @@
 	"redirects": [
 		{
 			"source": "/",
-			"destination": "/index.html",
+			"destination": "/",
 			"permanent": true
 		},
 		{
 			"source": "/home",
-			"destination": "/index.html",
+			"destination": "/",
 			"permanent": true
 		},
 		{
 			"source": "/details",
-			"destination": "/index.html",
+			"destination": "/",
 			"permanent": true
 		},
 		{
 			"source": "/location",
-			"destination": "/index.html",
+			"destination": "/",
 			"permanent": true
 		}
 	]
