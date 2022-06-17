@@ -2,7 +2,7 @@ import React from 'react';
 import MapLogo from '../../assets/icons/map.svg';
 import SettingsLogo from '../../assets/icons/settings.svg';
 import { useHistory } from 'react-router-dom';
-
+import './Header.css';
 const Header = () => {
 	const history = useHistory();
 	const handleClick = () => {
