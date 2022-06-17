@@ -9,6 +9,16 @@
 			"source": "/home",
 			"destination": "/index.html",
 			"type": "permanent"
+		},
+		{
+			"source": "/details",
+			"destination": "/index.html",
+			"type": "permanent"
+		},
+		{
+			"source": "/location",
+			"destination": "/index.html",
+			"type": "permanent"
 		}
 	]
 }
