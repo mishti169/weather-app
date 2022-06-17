@@ -12,8 +12,8 @@ const Location = () => {
 	return (
 		<div className='location'>
 			<div className='location--header'>
-				<div className='location--header_text-icon'>
-					<img onClick={handleClick} src={ChevronLeftLogo} width={21} className='chevron-left' />
+				<div onClick={handleClick} className='location--header_text-icon'>
+					<img src={ChevronLeftLogo} width={21} className='chevron-left' />
 					<span>Select City</span>
 				</div>
 				<img src={PlusLogo} width={21} className='location--header_plus-icon' />
