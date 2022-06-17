@@ -1,0 +1,25 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.header--text {
+	display: flex;
+	flex-direction: column;
+}
+.header_city {
+	font-size: 18px;
+	line-height: 21px;
+}
+.header_location {
+	font-size: 10px;
+	line-height: 12px;
+	color: #616161;
+}
+
+.header--icon {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 20px;
+}
