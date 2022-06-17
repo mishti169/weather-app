@@ -1,0 +1,26 @@
+.details {
+	padding: 70px 30px;
+}
+.details--body {
+	display: flex;
+	flex-direction: column;
+	row-gap: 30px;
+}
+.details--body_inner-body {
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+}
+.details--body_text {
+	font-size: 24px;
+	line-height: 28px;
+}
+.temp-details_title {
+	font-size: 12px;
+	line-height: 14px;
+	color: #616161;
+}
+.temp-details_Description {
+	font-size: 18px;
+	line-height: 21px;
+}
