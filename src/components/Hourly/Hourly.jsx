@@ -18,7 +18,6 @@ const Hourly = () => {
 				<HourlyData />
 				<HourlyData />
 				<HourlyData />
-				<HourlyData />
 			</div>
 		</div>
 	);
