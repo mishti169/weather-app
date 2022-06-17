@@ -15,6 +15,14 @@
 		{
 			"source": "/location",
 			"destination": "/"
+		},
+		{
+			"source": "/forecast",
+			"destination": "/"
+		},
+		{
+			"source": "/settings",
+			"destination": "/"
 		}
 	]
 }
