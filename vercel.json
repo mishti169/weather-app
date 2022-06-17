@@ -3,22 +3,22 @@
 		{
 			"source": "/",
 			"destination": "/index.html",
-			"type": "permanent"
+			"permanent": "true"
 		},
 		{
 			"source": "/home",
 			"destination": "/index.html",
-			"type": "permanent"
+			"permanent": "true"
 		},
 		{
 			"source": "/details",
 			"destination": "/index.html",
-			"type": "permanent"
+			"permanent": "true"
 		},
 		{
 			"source": "/location",
 			"destination": "/index.html",
-			"type": "permanent"
+			"permanent": "true"
 		}
 	]
 }
