@@ -1,0 +1,29 @@
+.forecast {
+	display: flex;
+	flex-direction: column;
+	padding: 70px 30px;
+}
+.forecast--body {
+	display: flex;
+	flex-direction: column;
+	row-gap: 50px;
+}
+.forecast--body-heading {
+	font-size: 24px;
+	line-height: 28px;
+}
+.forecast--body--hourly {
+	row-gap: 20px;
+	display: flex;
+	flex-direction: column;
+}
+.forecast--body--hourly_title {
+	font-size: 18px;
+	line-height: 21px;
+	color: #616161;
+}
+.forecast--body--hourly_time-icon--container {
+	display: flex;
+	flex-direction: column;
+	row-gap: 10px;
+}
