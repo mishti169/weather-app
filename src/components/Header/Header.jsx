@@ -8,6 +8,9 @@ const Header = () => {
 	const handleClick = () => {
 		history.push('/location');
 	};
+	const goToSettings = () => {
+		history.push('/settings');
+	};
 	return (
 		<div className='header'>
 			<div className='header--text'>
@@ -16,7 +19,7 @@ const Header = () => {
 			</div>
 			<div className='header--icon'>
 				<img onClick={handleClick} width={21} height={21} src={MapLogo} />
-				<img width={21} height={21} src={SettingsLogo} />
+				<img onClick={goToSettings} width={21} height={21} src={SettingsLogo} />
 			</div>
 		</div>
 	);
