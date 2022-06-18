@@ -31,6 +31,17 @@ const Settings = () => {
 					<span className='settings--titles_sub-titles_text'>Enjoying the app? Leave a review on the App Store.</span>
 				</div>
 			</div>
+			<div className='settings--headings'>
+				<span className='settings-titles'>About</span>
+				<div className='settings--titles--body'>
+					<span className='settings--titles_sub-titles'>About Weather</span>
+					<span className='settings--titles_sub-titles_text'>Read a bit more about the app.</span>
+				</div>
+				<div className='settings--titles--body'>
+					<span className='settings--titles_sub-titles'>The Team</span>
+					<span className='settings--titles_sub-titles_text'>Get to know the team that made Weather a reality.</span>
+				</div>
+			</div>
 		</div>
 	);
 };
