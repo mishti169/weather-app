@@ -2,9 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import './Splash.css';
 import axios from 'axios';
+import { weather } from '../../globalAtom';
+import { useAtom } from 'jotai';
 
 const Splash = () => {
 	const [location, setLocation] = useState(null);
+	const [, setWeatherData] = useAtom(weather);
 	const history = useHistory();
 	useEffect(() => {
 		getLocation();
@@ -12,8 +15,12 @@ const Splash = () => {
 
 	useEffect(() => {
 		if (location) {
-			axios.get(`https://api.weatherapi.com/v1/forecast.json?key=eacf688b839549519dc105316221806&q=${location.lat},${location.lng}&days=10&aqi=no&alerts=no
+			const { data } = axios.get(`https://api.weatherapi.com/v1/forecast.json?key=${import.meta.env.VITE_API_KEY}&q=${
+				location.lat
+			},${location.lng}&days=10&aqi=no&alerts=no
 	`);
+			setWeatherData(data);
+			history.push('/home');
 		}
 	}, [location]);
 
