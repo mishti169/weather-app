@@ -1,0 +1,15 @@
+.settings {
+	padding: 70px 30px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 50px;
+}
+.setting--header {
+	display: flex;
+	align-items: center;
+	color: #616161;
+}
+.setting--header_title {
+	font-size: 18px;
+	line-height: 21px;
+}
