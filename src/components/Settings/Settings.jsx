@@ -7,7 +7,7 @@ const Settings = () => {
 		<div className='settings'>
 			<div className='settings--header'>
 				<img width={21} src={ChevronLeftLogo} alt='left-chevron' />
-				<span className='setting--header_title'>Settings</span>
+				<span className='settings--header_title'>Settings</span>
 			</div>
 			<div className='settings--headings'>
 				<span className='settings-titles'>Theme</span>
