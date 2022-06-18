@@ -1,11 +1,16 @@
 import React from 'react';
 import './Settings.css';
 import ChevronLeftLogo from '../../assets/icons/chevron-left.svg';
+import { useHistory } from 'react-router-dom';
 
 const Settings = () => {
+	const history = useHistory();
+	const handleClick = () => {
+		history.push('/home');
+	};
 	return (
 		<div className='settings'>
-			<div className='settings--header'>
+			<div onClick={handleClick} className='settings--header'>
 				<img width={21} src={ChevronLeftLogo} alt='left-chevron' />
 				<span className='settings--header_title'>Settings</span>
 			</div>
