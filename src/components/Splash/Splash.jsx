@@ -9,17 +9,25 @@ const Splash = () => {
 	const [location, setLocation] = useState(null);
 	const [, setWeatherData] = useAtom(weather);
 	const history = useHistory();
+
+	const fetchWeather = async () => {
+		const { data } = await axios.get(`https://api.weatherapi.com/v1/forecast.json?key=${
+			import.meta.env.VITE_API_KEY
+		}&q=${location.lat},${location.lng}&days=10&aqi=no&alerts=no
+	`);
+		return data;
+	};
+
 	useEffect(() => {
 		getLocation();
 	}, []);
 
 	useEffect(() => {
 		if (location) {
-			const { data } = axios.get(`https://api.weatherapi.com/v1/forecast.json?key=${import.meta.env.VITE_API_KEY}&q=${
-				location.lat
-			},${location.lng}&days=10&aqi=no&alerts=no
-	`);
+			const data = fetchWeather();
+			console.log(data);
 			setWeatherData(data);
+
 			history.push('/home');
 		}
 	}, [location]);
