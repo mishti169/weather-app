@@ -24,6 +24,7 @@
 .home--body_date {
 	font-size: 18px;
 	line-height: 21px;
+	text-align: center;
 }
 .home--body_temp {
 	line-height: 110px;
