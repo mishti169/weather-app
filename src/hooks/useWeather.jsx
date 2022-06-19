@@ -5,7 +5,7 @@ import { weather } from '../globalAtom';
 
 export const useWeather = () => {
 	const [weatherData, setWeatherData] = useAtom(weather);
-	const [loading, setLoading] = useState(true);
+	const [loading, setLoading] = useState(weatherData ? false : true);
 	const [error, setError] = useState(false);
 	const [location, setLocation] = useState(null);
 
@@ -44,6 +44,12 @@ export const useWeather = () => {
 			fetchWeather();
 		}
 	}, [location]);
+
+	useEffect(() => {
+		if (weatherData && loading) {
+			setLoading(false);
+		}
+	}, [weatherData]);
 
 	return { loading, error, data: weatherData };
 };
