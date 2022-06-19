@@ -13,11 +13,7 @@ const Details = () => {
 		return <Splash />;
 	}
 
-	const {
-		forecast: { forecastday },
-	} = weatherData;
-	const [firstItem] = forecastday;
-	const { day } = firstItem;
+	const { current } = weatherData;
 
 	const handleClick = () => {
 		history.push('/forecast');
@@ -34,12 +30,12 @@ const Details = () => {
 					</span>
 				</div>
 				<div className='details--body_inner-body'>
-					<TempDetails title='Precipitation' description={day.totalprecip_mm} />
-					<TempDetails title='Precipitation' description={day.totalprecip_mm} />
-					<TempDetails title='Precipitation' description={day.totalprecip_mm} />
-					<TempDetails title='Precipitation' description={day.totalprecip_mm} />
-					<TempDetails title='Precipitation' description={day.totalprecip_mm} />
-					<TempDetails title='Precipitation' description={day.totalprecip_mm} />
+					<TempDetails title='Precipitation' description={`${current.precip_mm} mm`} />
+					<TempDetails title='SE Wind' description={`${current.wind_kph} km/h`} />
+					<TempDetails title='Humidity' description={`${current.humidity} %`} />
+					<TempDetails title='Visibility' description={`${current.vis_km} km`} />
+					<TempDetails title='UV' description={current.uv} />
+					<TempDetails title='Pressure' description={`${current.pressure_mb} hPa`} />
 				</div>
 			</div>
 		</div>
