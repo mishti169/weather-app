@@ -1,18 +1,22 @@
-import React from 'react';
 import MapLogo from '../../assets/icons/map.svg';
 import SettingsLogo from '../../assets/icons/settings.svg';
-import { weather } from '../../globalAtom';
-import { useAtom } from 'jotai';
 
 import { useHistory } from 'react-router-dom';
 import './Header.css';
-const Header = () => {
-	const [weatherData] = useAtom(weather);
-	const { location } = weatherData;
+const Header = (props) => {
 	const history = useHistory();
+	const { weatherData } = props;
+
+	if (!weatherData) {
+		return null;
+	}
+
+	const { location } = weatherData;
+
 	const handleClick = () => {
 		history.push('/location');
 	};
+
 	const goToSettings = () => {
 		history.push('/settings');
 	};
