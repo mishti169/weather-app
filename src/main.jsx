@@ -1,7 +1,6 @@
 import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import App from './App';
 import Splash from './components/Splash/Splash';
 import Home from './components/Home/Home';
 import Location from './components/Location/Location';
