@@ -6,9 +6,12 @@ import SunRiseLogo from '../../assets/icons/sunrise.svg';
 import SunSetLogo from '../../assets/icons/sunset.svg';
 import Header from '../Header/Header';
 import './Home.css';
+import { useAtom } from 'jotai';
+import { weather } from '../../globalAtom';
 
 const Home = () => {
 	const history = useHistory();
+	const [weatherData] = useAtom(weather);
 	const handleClick = () => {
 		history.push('/details');
 	};
