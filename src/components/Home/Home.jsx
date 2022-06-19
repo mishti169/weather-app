@@ -12,40 +12,46 @@ import { weather } from '../../globalAtom';
 const Home = () => {
 	const history = useHistory();
 	const [weatherData] = useAtom(weather);
+	const {
+		current,
+		forecast: { forecastday: forecastDay },
+	} = weatherData;
+
 	const handleClick = () => {
 		history.push('/details');
 	};
+
 	return (
 		<div className='home'>
 			<Header />
 			<span className='home--body_in-sync'>in sync</span>
 			<div onClick={handleClick} className='home--body'>
 				<div className='home--body_details'>
-					<span className='home--body_date'>Friday, 25 December 2020</span>
-					<span className='home--body_temp'>22℃</span>
+					<span className='home--body_date'>{forecastDay[0].date}</span>
+					<span className='home--body_temp'>{current.temp_c}℃</span>
 					<div className='home--body_temp_summary'>
 						<div className='home--body_temp_summary--detail'>
 							<img width={21} src={ArrowDownLogo} />
-							<span>16℃</span>
+							<span>{forecastDay[0].day.mintemp_c}℃</span>
 						</div>
 						<div className='home--body_temp_summary--detail'>
 							<img width={21} src={ArrowUpLogo} />
-							<span>26℃</span>
+							<span>{forecastDay[0].day.maxtemp_c}℃</span>
 						</div>
 					</div>
 				</div>
 				<div className='home--body_icon-and-text'>
 					<img width={128} src={CloudRainLogo} />
-					<span>Light Drizzle</span>
+					<span>{current.condition.text}</span>
 				</div>
 				<div className='home--body--time-container'>
 					<div className='home--body--time-container_icon-and-time'>
 						<img width={21} src={SunRiseLogo} alt='sunrise' />
-						<span>09:18 AM</span>
+						<span>{forecastDay[0].astro.sunrise}</span>
 					</div>
 					<div className='home--body--time-container_icon-and-time'>
 						<img width={21} src={SunSetLogo} alt='sunset' />
-						<span>06:18 PM</span>
+						<span>{forecastDay[0].astro.sunset}</span>
 					</div>
 				</div>
 			</div>
