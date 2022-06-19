@@ -1,9 +1,14 @@
 import React from 'react';
 import MapLogo from '../../assets/icons/map.svg';
 import SettingsLogo from '../../assets/icons/settings.svg';
+import { weather } from '../../globalAtom';
+import { useAtom } from 'jotai';
+
 import { useHistory } from 'react-router-dom';
 import './Header.css';
 const Header = () => {
+	const [weatherData] = useAtom(weather);
+	const { location } = weatherData;
 	const history = useHistory();
 	const handleClick = () => {
 		history.push('/location');
@@ -14,7 +19,7 @@ const Header = () => {
 	return (
 		<div className='header'>
 			<div className='header--text'>
-				<span className='header_city'>Mumbai</span>
+				<span className='header_city'>{location.name}</span>
 				<span className='header_location'>current Location </span>
 			</div>
 			<div className='header--icon'>
