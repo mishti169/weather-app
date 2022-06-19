@@ -12,6 +12,11 @@ import { weather } from '../../globalAtom';
 const Home = () => {
 	const history = useHistory();
 	const [weatherData] = useAtom(weather);
+
+	if (!weatherData) {
+		history.push('/');
+	}
+
 	const {
 		current,
 		forecast: { forecastday: forecastDay },
