@@ -1,20 +1,20 @@
+import { useHistory } from 'react-router-dom';
 import ArrowDownLogo from '../../assets/icons/arrow-down.svg';
 import ArrowUpLogo from '../../assets/icons/arrow-up.svg';
 import CloudRainLogo from '../../assets/icons/cloud-rain.svg';
-import { useHistory } from 'react-router-dom';
 import SunRiseLogo from '../../assets/icons/sunrise.svg';
 import SunSetLogo from '../../assets/icons/sunset.svg';
+import { useWeather } from '../../hooks/useWeather';
 import Header from '../Header/Header';
+import Splash from '../Splash/Splash';
 import './Home.css';
-import { useAtom } from 'jotai';
-import { weather } from '../../globalAtom';
 
 const Home = () => {
 	const history = useHistory();
-	const [weatherData] = useAtom(weather);
+	const { data: weatherData, loading } = useWeather();
 
-	if (!weatherData) {
-		history.push('/');
+	if (loading) {
+		return <Splash />;
 	}
 
 	const {
@@ -28,7 +28,7 @@ const Home = () => {
 
 	return (
 		<div className='home'>
-			<Header />
+			<Header weatherData={weatherData} />
 			<span className='home--body_in-sync'>in sync</span>
 			<div onClick={handleClick} className='home--body'>
 				<div className='home--body_details'>
