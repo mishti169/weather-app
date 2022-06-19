@@ -40,7 +40,7 @@ export const useWeather = () => {
 	}, []);
 
 	useEffect(() => {
-		if (location) {
+		if (location && !weatherData) {
 			fetchWeather();
 		}
 	}, [location]);
