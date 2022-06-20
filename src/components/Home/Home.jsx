@@ -1,10 +1,10 @@
 import { useHistory } from 'react-router-dom';
 import ArrowDownLogo from '../../assets/icons/arrow-down.svg';
 import ArrowUpLogo from '../../assets/icons/arrow-up.svg';
-import CloudRainLogo from '../../assets/icons/cloud-rain.svg';
 import SunRiseLogo from '../../assets/icons/sunrise.svg';
 import SunSetLogo from '../../assets/icons/sunset.svg';
 import { useWeather } from '../../hooks/useWeather';
+import { getWeatherIcon } from '../../util/utils';
 import Header from '../Header/Header';
 import Splash from '../Splash/Splash';
 import './Home.css';
@@ -46,7 +46,7 @@ const Home = () => {
 					</div>
 				</div>
 				<div className='home--body_icon-and-text'>
-					<img width={128} src={CloudRainLogo} />
+					<img width={128} src={getWeatherIcon(current.condition.code)} />
 					<span>{current.condition.text}</span>
 				</div>
 				<div className='home--body--time-container'>
