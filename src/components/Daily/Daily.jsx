@@ -20,6 +20,7 @@ const Daily = () => {
 							date={currentVal.date}
 							maxTemp={currentVal.day.maxtemp_c}
 							minTemp={currentVal.day.mintemp_c}
+							weatherCode={currentVal.day.condition.code}
 						/>
 					);
 				})}
