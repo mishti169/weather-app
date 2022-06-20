@@ -4,7 +4,7 @@ import HourlyData from '../HourlyData/HourlyData';
 import './Hourly.css';
 
 const Hourly = () => {
-	const { data: weatherData, loading } = useWeather();
+	const { data: weatherData } = useWeather();
 	const {
 		forecast: { forecastday },
 	} = weatherData;
