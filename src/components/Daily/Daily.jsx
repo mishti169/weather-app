@@ -9,20 +9,6 @@ const Daily = () => {
 			<span className='forecast--body--daily_title'>Daily Forecast</span>
 			<div className='forecast--body--daily_time-icon'>
 				<DailyData />
-				<DailyData />
-				<DailyData />
-				<DailyData />
-				<DailyData />
-				<DailyData />
-				<DailyData />
-				<DailyData />
-				<DailyData />
-				<DailyData />
-				<DailyData />
-				<DailyData />
-				<DailyData />
-				<DailyData />
-				<DailyData />
 			</div>
 		</div>
 	);
