@@ -1,23 +1,24 @@
 import React from 'react';
+import { useWeather } from '../../hooks/useWeather';
 import HourlyData from '../HourlyData/HourlyData';
 import './Hourly.css';
 
 const Hourly = () => {
+	const { data: weatherData, loading } = useWeather();
+	const {
+		forecast: { forecastday },
+	} = weatherData;
+	const [today] = forecastday;
+	const { hour } = today;
 	return (
 		<div className='forecast--body--hourly'>
 			<span className='forecast--body--hourly_title'>Hourly Forecast</span>
 			<div className='forecast--body--hourly_time-icon'>
-				<HourlyData />
-				<HourlyData />
-				<HourlyData />
-				<HourlyData />
-				<HourlyData />
-				<HourlyData />
-				<HourlyData />
-				<HourlyData />
-				<HourlyData />
-				<HourlyData />
-				<HourlyData />
+				{hour.map((currentVal) => {
+					console.log(currentVal.time);
+					const time = currentVal.time.split(' ')[1];
+					return <HourlyData hour={time} temp={currentVal.temp_c} />;
+				})}
 			</div>
 		</div>
 	);
