@@ -15,7 +15,6 @@ const Hourly = () => {
 			<span className='forecast--body--hourly_title'>Hourly Forecast</span>
 			<div className='forecast--body--hourly_time-icon'>
 				{hour.map((currentVal) => {
-					console.log(currentVal.time);
 					const time = currentVal.time.split(' ')[1];
 					return <HourlyData hour={time} temp={currentVal.temp_c} />;
 				})}
