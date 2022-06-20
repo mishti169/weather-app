@@ -21,3 +21,11 @@ code {
 .border {
 	border: 1px solid green;
 }
+
+/* Enable Dark mode using System Settings */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--primary-text-color: white;
+		--primary-background-color: black;
+	}
+}
