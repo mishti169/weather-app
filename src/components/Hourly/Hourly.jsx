@@ -10,11 +10,12 @@ const Hourly = () => {
 	} = weatherData;
 	const [today] = forecastday;
 	const { hour } = today;
+	const hours = [...hour].splice(6);
 	return (
 		<div className='forecast--body--hourly'>
 			<span className='forecast--body--hourly_title'>Hourly Forecast</span>
 			<div className='forecast--body--hourly_time-icon'>
-				{hour.map((currentVal) => {
+				{hours.map((currentVal) => {
 					const time = currentVal.time.split(' ')[1];
 					return (
 						<HourlyData
