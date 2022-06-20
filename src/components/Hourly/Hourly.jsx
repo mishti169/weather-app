@@ -16,7 +16,7 @@ const Hourly = () => {
 			<div className='forecast--body--hourly_time-icon'>
 				{hour.map((currentVal) => {
 					const time = currentVal.time.split(' ')[1];
-					return <HourlyData hour={time} temp={currentVal.temp_c} />;
+					return <HourlyData key={currentVal.time_epoch} hour={time} temp={currentVal.temp_c} />;
 				})}
 			</div>
 		</div>
