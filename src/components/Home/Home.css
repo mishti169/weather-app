@@ -4,7 +4,7 @@
 	padding: 70px 30px;
 }
 .home--body {
-	color: #616161;
+	color: var(--secondary-text-color);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -62,5 +62,5 @@
 
 img[alt='sunrise'],
 img[alt='sunset'] {
-	color: #616161;
+	color: var(--secondary-text-color);
 }

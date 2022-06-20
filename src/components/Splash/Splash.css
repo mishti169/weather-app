@@ -17,5 +17,5 @@
 	align-items: flex-end;
 	padding-bottom: 2rem;
 	font-size: 10px;
-	color: #616161;
+	color: var(--secondary-text-color);
 }
