@@ -80,3 +80,13 @@ export const getHomeScreenDate = (date) => {
 	const [{ value: weekday }, , { value: day }, , { value: month }, , { value: year }] = dateFormat.formatToParts(today);
 	return `${weekday}, ${day} ${month} ${year}`;
 };
+// create a function that returns date in the format of '26 Dec'
+export const getDate = (date) => {
+	const today = new Date(date);
+	const dateFormat = new Intl.DateTimeFormat('en-GB', {
+		day: 'numeric',
+		month: 'short',
+	});
+	const [{ value: day }, , { value: month }] = dateFormat.formatToParts(today);
+	return `${day} ${month}`;
+};

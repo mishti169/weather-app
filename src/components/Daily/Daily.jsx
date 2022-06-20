@@ -3,6 +3,7 @@ import DailyData from '../DailyData/DailyData';
 import { useWeather } from '../../hooks/useWeather';
 
 import './Daily.css';
+import { getDate } from '../../util/utils';
 
 const Daily = () => {
 	const { data: weatherData } = useWeather();
@@ -17,7 +18,7 @@ const Daily = () => {
 					return (
 						<DailyData
 							key={currentVal.date_epoch}
-							date={currentVal.date}
+							date={getDate(currentVal.date)}
 							maxTemp={currentVal.day.maxtemp_c}
 							minTemp={currentVal.day.mintemp_c}
 							weatherCode={currentVal.day.condition.code}
