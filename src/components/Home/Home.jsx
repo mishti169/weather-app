@@ -4,7 +4,7 @@ import ArrowUpLogo from '../../assets/icons/arrow-up.svg';
 import SunRiseLogo from '../../assets/icons/sunrise.svg';
 import SunSetLogo from '../../assets/icons/sunset.svg';
 import { useWeather } from '../../hooks/useWeather';
-import { getWeatherIcon } from '../../util/utils';
+import { getHomeScreenDate, getWeatherIcon } from '../../util/utils';
 import Header from '../Header/Header';
 import Splash from '../Splash/Splash';
 import './Home.css';
@@ -32,7 +32,7 @@ const Home = () => {
 			<span className='home--body_in-sync'>in sync</span>
 			<div onClick={handleClick} className='home--body'>
 				<div className='home--body_details'>
-					<span className='home--body_date'>{forecastDay[0].date}</span>
+					<span className='home--body_date'>{getHomeScreenDate(forecastDay[0].date)}</span>
 					<span className='home--body_temp'>{current.temp_c}℃</span>
 					<div className='home--body_temp_summary'>
 						<div className='home--body_temp_summary--detail'>

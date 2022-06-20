@@ -65,3 +65,18 @@ export const getWeatherIcon = (code) => {
 			return SunLogo;
 	}
 };
+
+export const getHomeScreenDate = (date) => {
+	const today = new Date(date);
+	console.log(today);
+
+	// Date Format : Friday, 1st January 2020
+	const dateFormat = new Intl.DateTimeFormat('en-GB', {
+		weekday: 'long',
+		day: 'numeric',
+		month: 'long',
+		year: 'numeric',
+	});
+	const [{ value: weekday }, , { value: day }, , { value: month }, , { value: year }] = dateFormat.formatToParts(today);
+	return `${weekday}, ${day} ${month} ${year}`;
+};
