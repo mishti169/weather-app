@@ -30,7 +30,7 @@
 	line-height: 110px;
 	font-size: 96px;
 	padding: 20px 0;
-	color: black;
+	color: var(--primary-text-color);
 }
 .home--body_temp_summary {
 	display: flex;
