@@ -22,10 +22,15 @@ code {
 	border: 1px solid green;
 }
 
+.feather-arrow-up,
+.feather-arrow-down {
+	color: var(--secondary-text-color);
+}
 /* Enable Dark mode using System Settings */
 @media (prefers-color-scheme: dark) {
 	:root {
 		--primary-text-color: white;
 		--primary-background-color: black;
+		--secondary-text-color: #a6a5a5;
 	}
 }
