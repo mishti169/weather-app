@@ -1,21 +1,21 @@
-import CloudRainLogo from '../assets/icons/cloud-rain.svg';
-import CloudDrizzleLogo from '../assets/icons/cloud-drizzle.svg';
-import CloudLightningLogo from '../assets/icons/cloud-lightning.svg';
-import CloudSnowLogo from '../assets/icons/cloud-snow.svg';
-import CloudLogo from '../assets/icons/cloud.svg';
-import SunLogo from '../assets/icons/sun.svg';
+import SunIcon from '../components/Icons/SunIcon';
+import CloudIcon from '../components/Icons/CloudIcon';
+import CloudDrizzleIcon from '../components/Icons/CloudDrizzleIcon';
+import CloudSnowIcon from '../components/Icons/CloudSnowIcon';
+import CloudRainIcon from '../components/Icons/CloudRainIcon';
+import CloudLightningIcon from '../components/Icons/CloudLightningIcon';
 
 export const getWeatherIcon = (code) => {
 	switch (code) {
 		case 1000:
-			return SunLogo;
+			return SunIcon;
 		case 1003:
 		case 1006:
 		case 1009:
 		case 1030:
 		case 1135:
 		case 1147:
-			return CloudLogo;
+			return CloudIcon;
 		case 1063:
 		case 1069:
 		case 1072:
@@ -25,7 +25,7 @@ export const getWeatherIcon = (code) => {
 		case 1171:
 		case 1204:
 		case 1207:
-			return CloudDrizzleLogo;
+			return CloudDrizzleIcon;
 		case 1066:
 		case 1114:
 		case 1117:
@@ -42,13 +42,13 @@ export const getWeatherIcon = (code) => {
 		case 1258:
 		case 1261:
 		case 1264:
-			return CloudSnowLogo;
+			return CloudSnowIcon;
 		case 1087:
 		case 1273:
 		case 1276:
 		case 1279:
 		case 1282:
-			return CloudLightningLogo;
+			return CloudLightningIcon;
 		case 1180:
 		case 1183:
 		case 1186:
@@ -60,9 +60,9 @@ export const getWeatherIcon = (code) => {
 		case 1240:
 		case 1243:
 		case 1246:
-			return CloudRainLogo;
+			return CloudRainIcon;
 		default:
-			return SunLogo;
+			return SunIcon;
 	}
 };
 

@@ -1,10 +1,8 @@
 import axios from 'axios';
-import { useAtom } from 'jotai';
 import { useEffect, useState } from 'react';
-import { weather } from '../globalAtom';
 
-export const useWeather = () => {
-	const [weatherData, setWeatherData] = useAtom(weather);
+export const useWeather = (loc) => {
+	const [weatherData, setWeatherData] = useState(null);
 	const [loading, setLoading] = useState(weatherData ? false : true);
 	const [error, setError] = useState(false);
 	const [location, setLocation] = useState(null);
@@ -21,12 +19,18 @@ export const useWeather = () => {
 		setLocation({ lat: position.coords.latitude, lng: position.coords.longitude });
 	};
 
+	const getQuery = () => {
+		const q = loc ? loc : `lat=${location.lat}&lon=${location.lng}`;
+		return `https://api.weatherapi.com/v1/forecast.json?key=${
+			import.meta.env.VITE_API_KEY
+		}&q=${q}&days=10&aqi=no&alerts=no
+    `;
+	};
+
 	const fetchWeather = async () => {
 		try {
-			const { data } = await axios.get(`https://api.weatherapi.com/v1/forecast.json?key=${
-				import.meta.env.VITE_API_KEY
-			}&q=${location.lat},${location.lng}&days=10&aqi=no&alerts=no
-    `);
+			const query = getQuery();
+			const { data } = await axios.get(query);
 			setLoading(false);
 			setWeatherData(data);
 		} catch (e) {
@@ -36,7 +40,11 @@ export const useWeather = () => {
 	};
 
 	useEffect(() => {
-		getLocation();
+		if (!loc) {
+			getLocation();
+			return;
+		}
+		setLocation(loc);
 	}, []);
 
 	useEffect(() => {

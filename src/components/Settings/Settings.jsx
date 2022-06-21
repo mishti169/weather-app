@@ -1,7 +1,6 @@
-import React from 'react';
-import './Settings.css';
-import ChevronLeftLogo from '../../assets/icons/chevron-left.svg';
 import { useHistory } from 'react-router-dom';
+import ChevronLeftIcon from '../Icons/ChevronLeftIcon';
+import './Settings.css';
 
 const Settings = () => {
 	const history = useHistory();
@@ -11,7 +10,7 @@ const Settings = () => {
 	return (
 		<div className='settings'>
 			<div onClick={handleClick} className='settings--header'>
-				<img width={21} src={ChevronLeftLogo} alt='left-chevron' />
+				<ChevronLeftIcon width={21} alt='left-chevron' />
 				<span className='settings--header_title'>Settings</span>
 			</div>
 			<div className='settings--headings'>
