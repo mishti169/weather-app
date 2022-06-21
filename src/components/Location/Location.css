@@ -10,10 +10,10 @@
 }
 .location--header_text-icon {
 	display: flex;
-	color: #616161;
+	color: var(--secondary-text-color);
 	align-items: center;
 	column-gap: 5px;
 }
 .location--header_plus-icon {
-	color: #616161;
+	color: var(--secondary-text-color);
 }

@@ -20,7 +20,7 @@
 .forecast--body--hourly_title {
 	font-size: 18px;
 	line-height: 21px;
-	color: #616161;
+	color: var(--secondary-text-color);
 }
 .forecast--body--hourly_time-icon {
 	display: flex;
@@ -46,7 +46,7 @@
 .forecast--body--daily_title {
 	font-size: 18px;
 	line-height: 21px;
-	color: #616161;
+	color: var(--secondary-text-color);
 }
 .forecast--body--daily_time-icon-temp--container {
 	display: flex;
@@ -58,13 +58,13 @@
 .forecast--body--daily_time-date {
 	font-size: 12px;
 	line-height: 14px;
-	color: #616161;
+	color: var(--secondary-text-color);
 }
 
 .forecast--body--daily_time-temp {
 	font-size: 10px;
 	line-height: 11px;
-	color: #616161;
+	color: var(--secondary-text-color);
 }
 .forecast--body--daily_time-icon {
 	display: flex;

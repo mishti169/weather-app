@@ -6,12 +6,12 @@
 	display: flex;
 	flex-direction: column;
 	row-gap: 5px;
-	color: #616161;
+	color: var(--secondary-text-color);
 }
 .city-temp--details_city {
 	font-size: 24px;
 	line-height: 28px;
-	color: black;
+	color: var(--primary-text-color);
 }
 .city-temp--details_temp {
 	font-size: 18px;
