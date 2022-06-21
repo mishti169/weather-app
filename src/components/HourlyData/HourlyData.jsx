@@ -1,13 +1,18 @@
 import React from 'react';
-import CloudRainLogo from '../../assets/icons/cloud-rain.svg';
 import { getWeatherIcon } from '../../util/utils';
 import './HourlyData.css';
 const HourlyData = (props) => {
 	const { hour, temp, weatherCode } = props;
+
+	const getIcon = (code) => {
+		const Icon = getWeatherIcon(code);
+		return <Icon width={21} height='auto' />;
+	};
+
 	return (
 		<div className='forecast--body--hourly_time-icon--container '>
 			<span className='forecast--body--hourly_time-temp'>{hour}</span>
-			<img src={getWeatherIcon(weatherCode)} width={24} />
+			{getIcon(weatherCode)}
 			<span className='forecast--body--hourly_time-temp'>{temp}℃</span>
 		</div>
 	);

@@ -58,13 +58,13 @@
 .forecast--body--daily_time-date {
 	font-size: 12px;
 	line-height: 14px;
-	color: var(--secondary-text-color);
+	color: var(--primary-text-color);
 }
 
 .forecast--body--daily_time-temp {
 	font-size: 10px;
 	line-height: 11px;
-	color: var(--secondary-text-color);
+	color: var(--primary-text-color);
 }
 .forecast--body--daily_time-icon {
 	display: flex;

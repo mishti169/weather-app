@@ -64,3 +64,7 @@ img[alt='sunrise'],
 img[alt='sunset'] {
 	color: var(--secondary-text-color);
 }
+
+.home-weather-icon {
+	color: var(--primary-text-color);
+}
