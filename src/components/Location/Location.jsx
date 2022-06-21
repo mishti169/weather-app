@@ -18,9 +18,12 @@ const Location = () => {
 				</div>
 				<PlusIcon width={21} className='location--header_plus-icon' />
 			</div>
-			<CityTemperature />
-			<CityTemperature />
-			<CityTemperature />
+			<CityTemperature location='idar,gujarat' />
+			<CityTemperature location='himmatnagar' />
+			<CityTemperature location='Ahmedabad,Gujarat' />
+			<CityTemperature location='mumbai' />
+			<CityTemperature location='goa' />
+			<CityTemperature location='pune' />
 		</div>
 	);
 };
