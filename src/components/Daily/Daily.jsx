@@ -1,12 +1,11 @@
 import React from 'react';
 import DailyData from '../DailyData/DailyData';
-import { useWeather } from '../../hooks/useWeather';
-
 import './Daily.css';
 import { getDate } from '../../util/utils';
 
-const Daily = () => {
-	const { data: weatherData } = useWeather();
+const Daily = (props) => {
+	const { weatherData } = props;
+
 	const { forecast } = weatherData;
 	const { forecastday } = forecast;
 

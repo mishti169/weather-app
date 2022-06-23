@@ -8,7 +8,6 @@ import { useWeather } from '../../hooks/useWeather';
 
 const ForeCast = () => {
 	const { data: weatherData, loading } = useWeather();
-
 	if (loading) {
 		return <Splash />;
 	}
@@ -18,8 +17,8 @@ const ForeCast = () => {
 			<Header weatherData={weatherData} />
 			<div className='forecast--body'>
 				<span className='forecast--body-heading'>Forecast</span>
-				<Hourly />
-				<Daily />
+				<Hourly weatherData={weatherData} />
+				<Daily weatherData={weatherData} />
 			</div>
 		</div>
 	);

@@ -1,10 +1,9 @@
 import React from 'react';
-import { useWeather } from '../../hooks/useWeather';
 import HourlyData from '../HourlyData/HourlyData';
 import './Hourly.css';
 
-const Hourly = () => {
-	const { data: weatherData } = useWeather();
+const Hourly = (props) => {
+	const { weatherData } = props;
 	const {
 		forecast: { forecastday },
 	} = weatherData;
