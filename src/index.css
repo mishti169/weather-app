@@ -3,7 +3,11 @@
 	--secondary-text-color: #616161;
 	--primary-background-color: white;
 }
-
+.dark-mode {
+	--primary-text-color: white;
+	--primary-background-color: black;
+	--secondary-text-color: #a6a5a5;
+}
 body {
 	margin: 0;
 	box-sizing: border-box;

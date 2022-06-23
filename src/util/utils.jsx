@@ -68,7 +68,6 @@ export const getWeatherIcon = (code) => {
 
 export const getHomeScreenDate = (date) => {
 	const today = new Date(date);
-	console.log(today);
 
 	// Date Format : Friday, 1st January 2020
 	const dateFormat = new Intl.DateTimeFormat('en-GB', {
