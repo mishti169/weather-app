@@ -11,7 +11,6 @@ import './Home.css';
 const Home = (props) => {
 	const history = useHistory();
 	const { data: weatherData, loading } = props;
-
 	if (loading) {
 		return <Splash />;
 	}

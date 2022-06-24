@@ -1,3 +1,6 @@
+import axios from 'axios';
+import { useAtom } from 'jotai';
+import { useEffect } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Details from './components/Details/Details';
@@ -6,17 +9,25 @@ import Home from './components/Home/Home';
 import Location from './components/Location/Location';
 import NoMatch from './components/NoMatch/NoMatch';
 import Settings from './components/Settings/Settings';
+import { weather } from './globalAtom';
 import { useWeather } from './hooks/useWeather';
 
 function App() {
-	const weatherData = useWeather();
+	const [weatherData, setWeatherData] = useAtom(weather);
+	const { data, loading, error } = useWeather();
+
+	useEffect(() => {
+		if (data) {
+			setWeatherData({ data, loading, error });
+		}
+	}, [data]);
 
 	return (
 		<BrowserRouter>
 			<Switch>
 				<Route path='/details' component={() => <Details {...weatherData} />} />
 				<Route path='/forecast' component={() => <ForeCast {...weatherData} />} />
-				<Route path='/settings' component={() => <Settings {...weatherData} />} />
+				<Route path='/settings' component={Settings} />
 				<Route path='/location' component={Location} />
 				<Route path='/home' component={() => <Home {...weatherData} />} />
 				<Route exact path='/' component={() => <Home {...weatherData} />} />

@@ -2,8 +2,12 @@ import { useWeather } from '../../hooks/useWeather';
 import { useHistory } from 'react-router-dom';
 import { getWeatherIcon } from '../../util/utils';
 import './CityTemperature.css';
+import { useAtom } from 'jotai';
+import { weather } from '../../globalAtom';
 
 const CityTemperature = (props) => {
+	const [, setWeatherData] = useAtom(weather);
+
 	const history = useHistory();
 	const { location } = props;
 	const { loading, data: weatherData } = useWeather(location);
@@ -14,12 +18,10 @@ const CityTemperature = (props) => {
 		const Icon = getWeatherIcon(code);
 		return <Icon width={40} />;
 	};
-	const getDetailOnHome = () => {
-		console.log('at home with detail');
-	};
+
 	const handleClick = () => {
+		setWeatherData({ data: weatherData, loading: false, error: false });
 		history.push('/home');
-		getDetailOnHome();
 	};
 	return (
 		<div onClick={handleClick} className='city-temp'>
