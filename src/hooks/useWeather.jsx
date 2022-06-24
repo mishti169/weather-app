@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 
 export const useWeather = (loc) => {
 	const [weatherData, setWeatherData] = useState(null);
+
 	const [loading, setLoading] = useState(weatherData ? false : true);
 	const [error, setError] = useState(false);
 	const [location, setLocation] = useState(null);

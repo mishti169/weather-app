@@ -9,10 +9,10 @@ const CloudLightningIcon = (props) => {
 			viewBox='0 0 24 24'
 			fill='none'
 			stroke='currentColor'
-			stroke-width='2'
-			stroke-linecap='round'
-			stroke-linejoin='round'
-			class='feather feather-cloud-lightning'
+			strokeWidth='2'
+			strokeLinecap='round'
+			strokeLinejoin='round'
+			className='feather feather-cloud-lightning'
 			{...props}
 		>
 			<path d='M19 16.9A5 5 0 0 0 18 7h-1.26a8 8 0 1 0-11.62 9'></path>
