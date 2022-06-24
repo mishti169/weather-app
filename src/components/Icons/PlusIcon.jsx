@@ -9,10 +9,10 @@ const PlusIcon = (props) => {
 			viewBox='0 0 24 24'
 			fill='none'
 			stroke='currentColor'
-			stroke-width='2'
-			stroke-linecap='round'
-			stroke-linejoin='round'
-			class='feather feather-plus'
+			strokeWidth='2'
+			strokeLinecap='round'
+			strokeLinejoin='round'
+			className='feather feather-plus'
 			{...props}
 		>
 			<line x1='12' y1='5' x2='12' y2='19'></line>

@@ -6,8 +6,8 @@ import './ForeCast.css';
 import Splash from '../Splash/Splash';
 import { useWeather } from '../../hooks/useWeather';
 
-const ForeCast = () => {
-	const { data: weatherData, loading } = useWeather();
+const ForeCast = (props) => {
+	const { data: weatherData, loading } = props;
 	if (loading) {
 		return <Splash />;
 	}

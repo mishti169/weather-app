@@ -5,9 +5,9 @@ import TempDetails from '../TempDetails/TempDetails';
 import Splash from '../Splash/Splash';
 import './Details.css';
 
-const Details = () => {
+const Details = (props) => {
 	const history = useHistory();
-	const { data: weatherData, loading } = useWeather();
+	const { data: weatherData, loading } = props;
 
 	if (loading) {
 		return <Splash />;

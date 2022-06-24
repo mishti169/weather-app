@@ -1,22 +1,28 @@
 import { useWeather } from '../../hooks/useWeather';
+import { useHistory } from 'react-router-dom';
 import { getWeatherIcon } from '../../util/utils';
 import './CityTemperature.css';
 
 const CityTemperature = (props) => {
+	const history = useHistory();
 	const { location } = props;
 	const { loading, data: weatherData } = useWeather(location);
-
 	if (loading) {
 		return <div>Loading...</div>;
 	}
-
 	const getIcon = (code) => {
 		const Icon = getWeatherIcon(code);
 		return <Icon width={40} />;
 	};
-
+	const getDetailOnHome = () => {
+		console.log('at home with detail');
+	};
+	const handleClick = () => {
+		history.push('/home');
+		getDetailOnHome();
+	};
 	return (
-		<div className='city-temp'>
+		<div onClick={handleClick} className='city-temp'>
 			<div className='city-temp--details '>
 				<span className='city-temp--details_city'>{weatherData?.location?.name}</span>
 				<span className='city-temp--details_temp'>{weatherData?.current?.temp_c}°C</span>

@@ -1,5 +1,4 @@
 import { useHistory } from 'react-router-dom';
-import { useWeather } from '../../hooks/useWeather';
 import { getHomeScreenDate, getWeatherIcon } from '../../util/utils';
 import Header from '../Header/Header';
 import ArrowDownIcon from '../Icons/ArrowDownIcon';
@@ -9,9 +8,9 @@ import SunSetIcon from '../Icons/SunSetIcon';
 import Splash from '../Splash/Splash';
 import './Home.css';
 
-const Home = () => {
+const Home = (props) => {
 	const history = useHistory();
-	const { data: weatherData, loading } = useWeather();
+	const { data: weatherData, loading } = props;
 
 	if (loading) {
 		return <Splash />;

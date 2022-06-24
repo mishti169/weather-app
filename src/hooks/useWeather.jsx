@@ -1,8 +1,12 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { useAtom } from 'jotai';
+// import weather from '../globalAtom';
 
 export const useWeather = (loc) => {
+	// const [weatherData, setWeatherData] = useAtom(weather);
 	const [weatherData, setWeatherData] = useState(null);
+
 	const [loading, setLoading] = useState(weatherData ? false : true);
 	const [error, setError] = useState(false);
 	const [location, setLocation] = useState(null);

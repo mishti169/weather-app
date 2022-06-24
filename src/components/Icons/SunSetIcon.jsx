@@ -9,10 +9,10 @@ const SunSetIcon = (props) => {
 			viewBox='0 0 24 24'
 			fill='none'
 			stroke='currentColor'
-			stroke-width='2'
-			stroke-linecap='round'
-			stroke-linejoin='round'
-			class='feather feather-sunset'
+			strokeWidth='2'
+			strokeLinecap='round'
+			strokeLinejoin='round'
+			className='feather feather-sunset'
 			{...props}
 		>
 			<path d='M17 18a5 5 0 0 0-10 0'></path>
