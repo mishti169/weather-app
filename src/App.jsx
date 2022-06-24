@@ -14,13 +14,13 @@ import { useWeather } from './hooks/useWeather';
 
 function App() {
 	const [weatherData, setWeatherData] = useAtom(weather);
-	const { data, loading, error } = useWeather();
+	const { data: apiData, loading, error } = useWeather();
 
 	useEffect(() => {
-		if (data) {
-			setWeatherData({ data, loading, error });
+		if (apiData) {
+			setWeatherData({ data: apiData, loading, error });
 		}
-	}, [data]);
+	}, [apiData]);
 
 	return (
 		<BrowserRouter>
