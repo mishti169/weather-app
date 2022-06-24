@@ -17,6 +17,7 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	color: var(--primary-text-color);
 	background: var(--primary-background-color);
+	transition: all ease 0.5s;
 }
 
 code {
