@@ -21,7 +21,7 @@ export const useWeather = (loc) => {
 	};
 
 	const getQuery = () => {
-		const q = loc ? loc : `lat=${location.lat}&lon=${location.lng}`;
+		const q = loc ? loc : `${location.lat},${location.lng}`;
 		return `https://api.weatherapi.com/v1/forecast.json?key=${
 			import.meta.env.VITE_API_KEY
 		}&q=${q}&days=10&aqi=no&alerts=no
